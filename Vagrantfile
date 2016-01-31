@@ -24,6 +24,7 @@ Vagrant.configure(2) do |config|
 
     apt-get -y install git build-essential nodejs-legacy npm cmake ruby-build silversearcher-ag postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3 libyaml-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev libpq-dev
     sudo -u postgres createuser --superuser vagrant
+    npm install -g webpack
   SCRIPT
 
   config.vm.provision :shell, privileged: false, inline: <<-SCRIPT
