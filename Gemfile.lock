@@ -125,6 +125,8 @@ GEM
     rake (10.5.0)
     rdoc (4.2.1)
       json (~> 1.4)
+    react_webpack_rails (0.1.0)
+      rails (>= 3.2)
     ref (2.0.0)
     rspec-core (3.4.2)
       rspec-support (~> 3.4.0)
@@ -194,6 +196,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.5.1)
   rails_12factor
+  react_webpack_rails
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
