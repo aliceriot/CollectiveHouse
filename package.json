@@ -1,0 +1,19 @@
+{
+  "name": "collective_house",
+  "version": "1.0.0",
+  "description": "A rails app to manage some stuff that is helpful for running a collective house!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliceriot/CollectiveHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliceriot/CollectiveHouse/issues"
+  },
+  "homepage": "https://github.com/aliceriot/CollectiveHouse#readme"
+}
