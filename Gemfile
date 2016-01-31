@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
 gem 'factory_girl_rails'
+gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'pg', '~> 0.15'
@@ -14,7 +16,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'haml'
 
 group :production do
   gem 'rails_12factor'
