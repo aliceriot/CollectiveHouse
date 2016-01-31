@@ -4,4 +4,6 @@
 //= require react_integration
 //= require react_bundle
 //= require bootstrap-sprockets
+//= require moment
+//= require fullcalendar
 //= require_tree .
