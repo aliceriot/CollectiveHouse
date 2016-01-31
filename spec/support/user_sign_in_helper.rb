@@ -12,7 +12,7 @@ module UserAccountHelper
   def log_in_as(user, password)
     visit "/"
     fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
+    fill_in "Password", with: password
     click_on "Log in"
   end
 end
