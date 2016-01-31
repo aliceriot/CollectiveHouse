@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :cutie, :class => 'Cutie' do
+  factory :house_member, :class => 'HouseMember' do
     first_name "Alice"
   end
 end

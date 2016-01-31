@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131145231) do
+ActiveRecord::Schema.define(version: 20160131150738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,14 +24,6 @@ ActiveRecord::Schema.define(version: 20160131145231) do
 
   add_index "calendars", ["display_name"], name: "index_calendars_on_display_name", using: :btree
 
-  create_table "cuties", force: :cascade do |t|
-    t.string   "first_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "cuties", ["first_name"], name: "index_cuties_on_first_name", using: :btree
-
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.datetime "start_time",  null: false
@@ -43,6 +35,14 @@ ActiveRecord::Schema.define(version: 20160131145231) do
   end
 
   add_index "events", ["title"], name: "index_events_on_title", using: :btree
+
+  create_table "house_members", force: :cascade do |t|
+    t.string   "first_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "house_members", ["first_name"], name: "index_house_members_on_first_name", using: :btree
 
   add_foreign_key "events", "calendars"
 end
