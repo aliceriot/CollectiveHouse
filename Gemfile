@@ -13,7 +13,6 @@ gem 'jquery-rails'
 gem 'momentjs-rails'
 gem 'pg', '~> 0.15'
 gem 'rails', '4.2.5.1'
-gem 'react_webpack_rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer', platforms: :ruby
