@@ -1,5 +1,6 @@
 import RWR from 'react-webpack-rails';
 RWR.run();
 
-// import HelloWorld from './components/hello-world';
-// RWR.registerComponent('HelloWorld', HelloWorld);
+// component manifest
+import GroceryList from "./components/grocery_list/grocery_list"
+RWR.registerComponent('GroceryList', GroceryList);
