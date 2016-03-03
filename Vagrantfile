@@ -19,10 +19,12 @@ Vagrant.configure(2) do |config|
     sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
+    curl -sL https://deb.nodesource.com/setup_5.x | bash -
+
     apt-get -y update
     apt-get -y upgrade
 
-    apt-get -y install git build-essential nodejs-legacy npm cmake ruby-build silversearcher-ag postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3 libyaml-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev libpq-dev
+    apt-get -y install git build-essential nodejs cmake ruby-build silversearcher-ag postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3 libyaml-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev libpq-dev
     sudo -u postgres createuser --superuser vagrant
     npm install -g webpack
   SCRIPT
