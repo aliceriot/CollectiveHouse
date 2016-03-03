@@ -6,6 +6,6 @@ module UserAccountHelper
 
   def sign_in_test_user
     create_test_user
-    log_in_as @user
+    log_in_as @user, "asdfasdf"
   end
 end
