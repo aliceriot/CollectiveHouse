@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160303225828) do
+ActiveRecord::Schema.define(version: 20160304014513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 20160303225828) do
 
   add_index "events_house_members", ["event_id", "house_member_id"], name: "index_events_house_members_on_event_id_and_house_member_id", using: :btree
   add_index "events_house_members", ["house_member_id", "event_id"], name: "index_events_house_members_on_house_member_id_and_event_id", using: :btree
+
+  create_table "grocery_items", force: :cascade do |t|
+    t.text     "name",                          null: false
+    t.integer  "quantity"
+    t.boolean  "purchased",     default: false
+    t.integer  "cost_in_cents"
+    t.integer  "user_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "house_members", force: :cascade do |t|
     t.string   "first_name", null: false
