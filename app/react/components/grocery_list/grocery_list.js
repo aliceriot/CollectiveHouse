@@ -6,6 +6,10 @@ import GroceryListContainer from "./grocery_list_container";
 
 class GroceryList extends React.Component {
   render () {
+    groceryListStore.dispatch({
+      type: 'SET_GROCERY_ITEMS',
+      groceryItems: [1,2,3,4]
+    });
     return (
       <Provider store = {groceryListStore}>
         <GroceryListContainer />
