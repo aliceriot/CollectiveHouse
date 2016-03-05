@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { connect } from "react-redux";
+import GroceryListContents from "./grocery_list_contents";
 
 class GroceryListContainer extends React.Component {
   render () {

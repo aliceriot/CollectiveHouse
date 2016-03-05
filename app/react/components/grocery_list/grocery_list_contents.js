@@ -5,9 +5,21 @@ class GroceryListContents extends React.Component {
   render() {
     return (
       <div>
-        {this.props.groceryItems.map((foo) => <div>foo</div>)}
+        {this.renderGroceryItems()}
       </div>
     );
+  }
+
+  renderGroceryItems () {
+    let groceryItems = [];
+    this.props.groceryItems.map( (foo) => {
+      groceryItems.push(
+        <div key={foo}>
+          {foo}
+        </div>
+      );
+    });
+    return groceryItems;
   }
 }
 
