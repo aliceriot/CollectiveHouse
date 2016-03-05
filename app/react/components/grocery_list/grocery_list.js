@@ -6,7 +6,6 @@ import GroceryListContainer from "./grocery_list_container";
 
 class GroceryList extends React.Component {
   render () {
-    console.log(groceryListStore.getState())
     return (
       <Provider store = {groceryListStore}>
         <GroceryListContainer />
