@@ -1,12 +1,19 @@
 import React from "react";
 import { render } from "react-dom";
+import { connect } from "react-redux";
 
 class GroceryListContainer extends React.Component {
   render () {
     return (
-      <div>Hello, world!</div>
+      {this.props.groceryItems.map((foo) => <div>{foo}</div>);}
     );
   }
 }
 
-export default GroceryListContainer;
+function mapStateToProps (state) {
+  return {
+    groceryItems: state.groceryItems
+  }
+}
+
+export default connect(mapStateToProps)(GroceryListContainer);

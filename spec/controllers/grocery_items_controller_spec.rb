@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe GroceryItemsControllerController, type: :controller do
+RSpec.describe GroceryItemsController, type: :controller do
 
 end
