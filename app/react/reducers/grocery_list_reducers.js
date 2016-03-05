@@ -6,6 +6,10 @@ function groceryApp (state = {}, action) {
       return Object.assign({}, state, {
         groceryItems: action.groceryItems
       });
+    case actions.SET_SYNC_STATE:
+      return Object.assign({}, state, {
+        syncState: action.status
+      });
     default:
       return state;
   }

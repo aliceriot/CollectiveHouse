@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import GroceryListItem from "./grocery_list_item";
 
 class GroceryListContents extends React.Component {
   render() {
