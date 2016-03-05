@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 class GroceryListContainer extends React.Component {
   render () {
     return (
-      {this.props.groceryItems.map((foo) => <div>{foo}</div>);}
+      <GroceryListContents groceryItems={this.props.groceryItems} />
     );
   }
 }
