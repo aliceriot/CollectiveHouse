@@ -1,14 +1,15 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import groceryListStore from "../../stores/grocery_list_store";
 import GroceryListContents from "./grocery_list_contents";
 
 class GroceryList extends React.Component {
   render () {
     return (
-      <Provider store = {
-      <div>Hello, world!</div>
+      <Provider store = {groceryListStore}>
+        <GroceryListContents />
+      </Provider>
     );
   }
 }
