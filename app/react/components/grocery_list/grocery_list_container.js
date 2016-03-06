@@ -32,7 +32,7 @@ class GroceryListContainer extends React.Component {
     const { groceryItems, syncState } = this.props;
     return (
       <div>
-        <GroceryListContents groceryItems={this.props.groceryItems} />
+        <GroceryListContents {...this.props} />
         <button onClick={this.handleRefreshClick.bind(this)} />
       </div>
     );

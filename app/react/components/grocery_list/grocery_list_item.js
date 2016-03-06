@@ -5,14 +5,16 @@ class GroceryListItem extends React.Component {
   render () {
     return (
       <div>
-        {this.props.item.name}
+        {this.props.name}
+        {this.props.quantity}
       </div>
     );
   }
 }
 
 GroceryListItem.propTypes = {
-  item:   React.PropTypes.object
+  name:       React.PropTypes.string,
+  quantity:   React.PropTypes.integer
 }
 
 export default GroceryListItem;

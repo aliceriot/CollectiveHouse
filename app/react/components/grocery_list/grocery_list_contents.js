@@ -6,6 +6,9 @@ class GroceryListContents extends React.Component {
   render() {
     return (
       <div>
+        <h1>
+          {this.props.syncState}
+        </h1>
         {this.renderGroceryItems()}
       </div>
     );
@@ -16,12 +19,20 @@ class GroceryListContents extends React.Component {
     if (this.props.groceryItems) {
       this.props.groceryItems.forEach( (item, index) => {
         groceryItems.push(
-          <GroceryListItem item={item} key={index} />
+          <GroceryListItem
+            name={item.name}
+            quantity={item.quantity}
+            key={index} />
         );
       });
     };
     return groceryItems;
   }
+}
+
+GroceryListContents.propTypes = {
+  groceryItems:     React.PropTypes.array,
+  syncState:        React.PropTypes.string
 }
 
 export default GroceryListContents;
