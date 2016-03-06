@@ -8,7 +8,7 @@ function groceryApp (state = {}, action) {
       });
     case actions.SET_SYNC_STATE:
       return Object.assign({}, state, {
-        syncState: action.status
+        syncState: action.syncState
       });
     default:
       return state;

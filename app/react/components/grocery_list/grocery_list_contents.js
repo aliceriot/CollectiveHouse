@@ -13,13 +13,13 @@ class GroceryListContents extends React.Component {
 
   renderGroceryItems () {
     let groceryItems = [];
-    this.props.groceryItems.map( (foo) => {
-      groceryItems.push(
-        <div key={foo}>
-          {foo}
-        </div>
-      );
-    });
+    if (this.props.groceryItems) {
+      this.props.groceryItems.forEach( (item, index) => {
+        groceryItems.push(
+          <GroceryListItem item={item} key={index} />
+        );
+      });
+    };
     return groceryItems;
   }
 }
