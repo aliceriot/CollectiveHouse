@@ -49,7 +49,7 @@ Vagrant.configure(2) do |config|
     echo "cd /vagrant" >> ~/.profile
     echo "done."
 
-    echo "alias dbmigrate='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV="test"'" >> ~/.bashrc
+    echo "alias dbmigrate='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV="test"'" >> ~/.bashrc
     echo "alias runspec='bundle exec bin/rspec'" >> ~/.bashrc
     echo "alias serve='bin/rails s -b 0.0.0.0'" >> ~/.bashrc
   SCRIPT
