@@ -49,6 +49,9 @@ Vagrant.configure(2) do |config|
     echo "cd /vagrant" >> ~/.profile
     echo "done."
 
+    rails r script/create_grocery_items.rb
+    rails r script/create_grocery_stores.rb
+
     echo "alias dbmigrate='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV="test"'" >> ~/.bashrc
     echo "alias runspec='bundle exec bin/rspec'" >> ~/.bashrc
     echo "alias serve='bin/rails s -b 0.0.0.0'" >> ~/.bashrc
