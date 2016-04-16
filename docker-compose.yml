@@ -17,6 +17,8 @@ services:
         build:
             context: .
             dockerfile: Dockerfile-js
-        command: npm run-script rwr-node-dev-server
+        command: npm run-script start-hot-dev
+        ports:
+            - "8080:8080"
         volumes:
             - .:/src
