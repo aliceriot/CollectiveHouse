@@ -10,8 +10,4 @@
   %body
     = render 'layouts/react_hot_assets'
     - if user_signed_in?
-      .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-        = render :partial => 'layouts/navigation'
-        .mdl-layout__content
-          .mdl-grid
-            = yield
+      =yield
