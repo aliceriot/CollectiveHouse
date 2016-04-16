@@ -1,17 +1,16 @@
-.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle.collapsed{'data-toggle' => "collapse", 'data-target' => "#beauvoir-navbar-collapse", 'aria-expanded' => "false"}
-        %span.sr-only Toggle Navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-    .collapse.navbar-collapse#beauvoir-navbar-collapse
-      %ul.nav.navbar-nav
-        %li#home
-          = link_to "Calendar", '/home'
-        %li#groceries
-          = link_to "Groceries", "/groceries"
-      %ul.nav.navbar-nav.navbar-right
-        %li#logout
-          = link_to "Sign Out", destroy_user_session_path, method: :delete
+%header.mdl-layout__header
+  .mdl-layout__header-row
+    %span.mdl-layout-title
+      Collective House
+    .mdl-layout-spacer
+    %nav.mdl-navigation.mdl-layout--large-screen-only
+      .mdl-navigation__link
+        = link_to "Calendar", "/home"
+      .mdl-navigation__link
+        = link_to "Groceries", "/groceries"
+.mdl-layout__drawer
+  %nav.mdl-navigation
+    .mdl-navigation__link
+      = link_to "Calendar", "/home"
+    .mdl-navigation__link
+      = link_to "Groceries", "/groceries"

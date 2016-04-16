@@ -9,11 +9,13 @@
     = stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons"
   %body
     = render 'layouts/react_hot_assets'
-    .container
-      - if user_signed_in?
+    - if user_signed_in?
+      .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
         = render :partial => 'layouts/navigation'
-      = yield
-    %p.notice
-      = notice
-    %p.alert
-      = alert
+        .mdl-layout__content
+          .mdl-grid
+            = yield
+    -# %p.notice
+    -#   = notice
+    -# %p.alert
+    -#   = alert
