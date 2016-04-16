@@ -1,0 +1,13 @@
+# vim: set filetype=dockerfile:
+
+FROM node:5.10.1
+
+WORKDIR /src
+
+ADD ./package.json /src
+
+ADD ./npm-shrinkwrap.json /src
+
+RUN npm install
+
+ADD . /src

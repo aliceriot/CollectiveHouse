@@ -12,3 +12,11 @@ services:
             - "3000:3000"
         depends_on:
             - db
+
+    js:
+        build:
+            context: .
+            dockerfile: Dockerfile-js
+        command: npm run-script rwr-node-dev-server
+        volumes:
+            - .:/src
