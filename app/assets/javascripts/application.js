@@ -6,4 +6,5 @@
 //= require fullcalendar
 //= require react_integration
 //= require react_bundle
+//= require material
 //= require_tree .
