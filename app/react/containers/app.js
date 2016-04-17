@@ -42,8 +42,8 @@ class App extends React.Component {
     return (
       <Router history={browserHistory}>
         <Route path="/" component={CollectiveHouseNav}>
-          <Route path="hey" component={Hey} />
-          <Route path="you" component={You} />
+          <Route path="groceries" component={Hey} />
+          <Route path="calendar" component={You} />
         </Route>
       </Router>
     );
