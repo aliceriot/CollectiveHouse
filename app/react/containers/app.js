@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Link, Route, browserHistory } from 'react-router';
+import CollectiveHouseNav from "../components/shared/collective_house_nav";
 
 class Root extends React.Component {
   render () {
@@ -21,10 +22,6 @@ class Hey extends React.Component {
     return(
       <div>
         hey
-        <br/>
-        <Link to="hey">hey</Link>
-        <br/>
-        <Link to="you">you</Link>
       </div>
     );
   }
@@ -35,10 +32,6 @@ class You extends React.Component {
     return(
       <div>
         you
-        <br/>
-        <Link to="hey">hey</Link>
-        <br/>
-        <Link to="you">hey</Link>
       </div>
     );
   }
@@ -48,7 +41,7 @@ class App extends React.Component {
   render () {
     return (
       <Router history={browserHistory}>
-        <Route path="/" component={Root}>
+        <Route path="/" component={CollectiveHouseNav}>
           <Route path="hey" component={Hey} />
           <Route path="you" component={You} />
         </Route>
