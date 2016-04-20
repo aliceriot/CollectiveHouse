@@ -38,10 +38,10 @@ class CollectiveHouseNav extends React.Component {
 
   routerLinks = () => ([
     <Link to="/calendar" key={1} onClick={this.closeDrawer}>
-      Hey
+      Calendar
     </Link>,
     <Link to="/groceries" key={2} onClick={this.closeDrawer}>
-      You
+      Groceries
     </Link>
   ]);
 }
