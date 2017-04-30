@@ -2,5 +2,6 @@ import RWR from 'react-webpack-rails';
 RWR.run();
 
 // component manifest
-import GroceryList from "./components/grocery_list/grocery_list"
-RWR.registerComponent('GroceryList', GroceryList);
+// App is our container component
+import App from "./containers/app";
+RWR.registerComponent('App', App);

@@ -19,6 +19,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
+gem 'material_design_lite-rails'
 gem 'uglifier', '>= 1.3.0'
 
 group :production do
